@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include('../partials/head.ejs') %>
+     <script src="/javascript/ckeditor/ckeditor.js"></script>
+     
+</head>
+<body>
+     <!-- //navbar------ -->
+     <%- include('../partials/navbar.ejs') %>
+
+     <!-- -------main content------------- -->
+     <section>
+          <div class="cretepost">
+               <form action="/post/updatepost/<%=post.id %>" method="POST">
+                    <div class="createPost">
+                         Title
+                    </div>
+                    <div>
+                         <input type="text" name="title" id="title" value="<%= post.title%>" required maxlength="200">
+                    </div>
+                    <div class="createPost">
+                         Body
+                    </div>
+                    <div>
+                         <textarea name="bodyOfEditor" id="bodyOfEditor" cols="30" rows="10" required><%= post.bodyOfEditor %></textarea>
+                    </div>
+                    <div>
+
+                         <button type="submit" class="btn_submit">Update Post</button>
+                         
+                    </div>
+               </form>
+               <div>
+                    <!-- <input type="submit", value="Update Post" class="btn_submit"> -->
+               </div>
+               
+          </div>
+     </section>
+
+     <!-- ----------javascript----------- -->
+     
+     <script>
+          CKEDITOR.replace("bodyOfEditor")
+          
+     </script>
+</body>
+</html>

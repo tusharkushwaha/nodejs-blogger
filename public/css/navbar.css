@@ -1,0 +1,53 @@
+
+body{
+     margin:0px;
+     padding: 0px;
+     background-color: #f2e5c8;
+     
+}
+a{
+     text-decoration: none;
+}
+.navbar{
+     display: flex;
+     list-style-type: none;
+     margin:0%;
+     background-color: rgb(20, 13, 13);
+     align-items: center;
+}
+#navbar_sicky{
+     position: sticky;
+     top: 0px;
+}
+
+#navbar_right{
+     margin-left: auto;
+}
+.nav_right{
+     margin: 5px 10px;
+     padding: 5px 17px;
+     font-size: 20px;
+     border: 2px solid rgb(255, 254, 254);
+     border-radius: 10px;
+     
+}
+.nav_right>a{
+     color: white;
+}
+.nav_right>a:hover{
+     color: red;
+}
+#logo_profile>a>img{
+border-radius: 20px;
+}
+
+
+
+/* -------input type number: removing number */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

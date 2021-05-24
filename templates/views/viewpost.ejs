@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <%- include('../partials/head.ejs') %>
+     <style>
+#main{
+     text-align: center;
+     border-left: 2px solid black;
+     border-bottom: 2px solid black;
+     margin: 24px;
+}
+
+#post_title{
+     text-align: center;
+     font-weight: bold;
+     font-size: 3vw;
+     font-family: 'Roboto', sans-serif;
+}
+#post_body{
+     font-size: 1.8vw;
+     padding: 2px 2px;
+     margin: 2px 38px;
+}
+     </style>
+</head>
+<body>
+     <!-- //navbar------ -->
+     <%- include('../partials/navbar.ejs') %>
+
+     <!-- --------main contentt--------- -->
+     <div id="main">
+          <div id="post_title"><%= post.title %></div>
+          <div>_______________________________</div>
+          <div id="post_body"><%- post.bodyOfEditor %></div>
+     </div>
+</body>
+</html>

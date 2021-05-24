@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+     <!-- //navbar------ -->
+     <%- include('../partials/navbar.ejs') %>
+
+          <!-- //main content -->
+          <section>
+
+               <div class="container">
+                    <div class="container_border">
+                         <div>
+                              <h1>
+                                   Registration
+                              </h1>
+                              <div class="message">
+
+                                   <% if( typeof (existing_message) !="undefined" ) {%>
+                                        <%= existing_message %>
+                                             <%} %>
+                              </div>
+                         </div>
+                         <form action="/auth/signup" method="POST">
+                              <table>
+                                   <tr>
+                                        <td>First Name:</td>
+                                        <td><input type="text" name="firstname" id="firstname" placeholder="First Name" required></td>
+                                   </tr>
+                                   <tr>
+                                        <td>Last Name:</td>
+                                        <td><input type="text" name="lastname" id="lastname" placeholder="Last Name" required></td>
+                                   </tr>
+
+                                   <tr>
+                                        <td>
+                                             Email:
+                                        </td>
+                                        <td>
+                                             <input type="email" name="email" id="email" placeholder="Email" required>
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td>
+                                             Password:
+                                        </td>
+                                        <td>
+                                             <input type="password" name="password" id="password"
+                                                  placeholder="Password" required maxlength="18">
+                                        </td>
+                                   <tr>
+                                   <tr>
+                                        <td>
+                                             Confirm Password:
+                                        </td>
+                                        <td>
+                                             <input type="password" name="confirmpassword" id="confirmpassword"
+                                                  placeholder="Confirm Password" required maxlength="18">
+                                        </td>
+                                   <tr>
+                                        <td colspan="2"><input type="submit" value="Create Account" class="btn_submit">
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td colspan="2">OR</td>
+                                   </tr>
+                                   <tr>
+                                        <td colspan="2">
+
+                                             <a href="/auth/google"><img src="/images/GButton.png"
+                                                       alt="Sign in with Google" height="40px"></a>
+
+
+                                        </td>
+                                   </tr>
+                              </table>
+                         </form>
+                    </div>
+
+               </div>
+          </section>
+          <!-- ----javascript -->
+
+</body>
+
+</html>

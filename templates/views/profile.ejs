@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <%- include('../partials/head.ejs') %>
+</head>
+
+
+
+<body>
+
+     <!-- //navbar------ -->
+     <%- include('../partials/navbar.ejs') %>
+
+          <!-- ------------body------- -->
+          <section>
+               <div >
+                    
+                    <form action="/profile" method="POST" enctype="multipart/form-data" class="body_container">
+                         <h1>Your Profile</h1>
+                         <div class="message">
+
+                              <% if( typeof (error) !="undefined" ) {%>
+                                   <%= error %>
+                                        <%} %>
+                         </div>
+                         <table>
+                              <tr>
+                                   <td>
+                                        Profile Picture:
+                                   </td>
+                                   <% if(user.imageurl){ %>
+                                        <td><img id="profile_img" src="<%=user.imageurl%>" alt="profile Picture"
+                                                  height="160px"> </td>
+                                        <% } %>
+
+                              </tr>
+                              <tr>
+                                   <td>Edit Profile Picture:</td>
+                                   <td><input type="file" name="image"></td>
+                              </tr>
+                                        <tr>
+                                             <td>Email:</td>
+                                             <td>
+                                                  <%=user.email%>
+                                             </td>
+                                        </tr>
+                                        <tr>
+                                             <td>First Name:</td>
+                                             <% if(user.firstname){ %>
+                                                  <td><input type="text" name="firstname" value="<%= user.firstname %>">
+                                                  </td>
+                                                  <% }else{ %>
+                                                       <td><input type="text" name="firstname" value=""> </td>
+                                                       <% } %>
+
+                                        </tr>
+                                        <tr>
+                                             <td>Last Name:</td>
+                                             <% if(user.lastname){ %>
+                                                  <td><input type="text" name="lastname" value="<%=user.lastname%>">
+                                                  </td>
+                                                  <% }else{ %>
+                                                       <td><input type="text" name="lastname"> </td>
+                                                       <% } %>
+
+                                        </tr>
+                                        <tr>
+                                             <td>Mobile Number:</td>
+                                             <% if(user.mobilenumber){ %>
+                                                  <td><input type="text" name="mobilenumber" pattern="[6-9]{1}[0-9]{9}" value="<%= user.mobilenumber %>"
+                                                       oninvalid="this.setCustomValidity('Enter correct mobile number')">
+                                                </td>
+                                                  <% }else{ %>
+                                                       <td><input type="text" name="mobilenumber" pattern="[6-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('Enter correct mobile number')"> </td>
+                                                       <% } %>
+
+                                        </tr>
+                                        <tr>
+                                             <td colspan="2">
+                                                  <input type="submit" value="Update Profile" class="btn_submit">
+                                             </td>
+                                        </tr>
+                         </table>
+                    </form>
+               </div>
+          </section>
+</body>
+
+</html>

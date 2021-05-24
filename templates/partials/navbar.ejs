@@ -1,0 +1,36 @@
+<section id="navbar_sicky">
+     <nav>
+          <ul class="navbar">
+              <li><a href="/"><img src="/images/blogger.png" alt="logo" height="40px"></a></li> 
+               <li class="nav_right"><a href="/">Bloggerr</a></li>
+               
+               <% if(typeof(user) =="undefined") {%>
+    
+                    <li id="navbar_right" class="nav_right"><a href="/auth/login">Login</a></li>
+                    <%} %>
+                    <% if(typeof(user) =="undefined") {%>
+                         <li class="nav_right"><a href="/auth/signup">Sign Up</a></li>
+    
+                         <%} %>
+
+                         
+               <% if(typeof(user) !="undefined") {%>
+                    <li id = "logo_profile" style="margin-left: auto;" ><a href="/profile"><img src="<%=user.imageurl %>" alt="profile" height="38px"></a></li>
+                    
+                    <%} %>
+               <% if(typeof(user) !="undefined") {%>
+                    <li class="nav_right"><a href="/post/createPost">Create Post</a></li>
+                    
+                    <%} %>
+               <% if(typeof(user) !="undefined") {%>
+                    <li class="nav_right"><a href="/auth/logout">Logout</a></li>
+                    
+                    <%} %>
+               <% if(typeof(user) =="undefined") {%>
+                    <li class="nav_right"><a href="/imagegallery">Images</a></li>
+                    
+                    <%} %>
+          </ul>
+     </nav>
+</section>
+

@@ -1,0 +1,81 @@
+h1{
+     color: yellow;
+     font-size: 30px;
+     margin: 11px 0px;
+     font-family: 'Roboto', sans-serif; 
+}
+.container{
+     width: 450px;
+     display: block;
+     margin: auto;
+     padding: 80px 100px;
+     text-align: center;
+     
+}
+.container>div{
+     background-color:rgb(26, 23, 23) ;
+     border-radius: 19px;
+     
+}
+table{
+     width: 100%;
+     margin: auto;
+     text-align: center;
+     font-size: 20px;
+     
+     color: white;
+}
+
+tr{
+     font-size: 22px;
+}
+td>input{
+     font-size: 14px;
+     padding: 2px 2px;
+     margin: 4px 10px;
+     width: 80%;
+}
+.btn_submit{
+     font-size: 22px;
+     padding: 2px 10px;
+     margin: 11px 3px;
+     background-color: green;
+     border-radius: 11px;
+     color: white;
+     font-weight: bold;
+     width: 90%;
+     font-family: 'Roboto', sans-serif;
+}
+
+.btn_submit:hover{
+     cursor: pointer;
+     color: red;
+}
+
+
+
+#my-signin2{
+     width: 15rem;
+     display: block;
+     margin: auto;
+}
+
+.message{
+     font-size: 15px;
+     background-color: rgb(112, 15, 15);
+     width: 90%;
+     margin:2px auto;
+     border-radius: 12px;
+     /* padding: 2px 2px; */
+     color: white;
+    
+}
+.message_afterlogin{
+     font-size: 15px;
+     background-color: rgb(112, 15, 15);
+     width: 90%;
+     margin:2px auto;
+     border-radius: 12px;
+     /* padding: 2px 2px; */
+     color: white;
+}

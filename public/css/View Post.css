@@ -1,0 +1,42 @@
+.createPost{
+     font-size: 28px;
+     font-family:'Roboto', sans-serif;
+     font-weight: bold;
+     text-align: center  ;
+     padding: 2px 2px;
+     margin: 2px 2px;
+}
+#title{
+     display: block;
+     width: 90%;
+     margin: auto;
+     height: 30%;
+     font-family:'Roboto', sans-serif;
+}
+.btn_submit{
+     /* display: block; */
+     font-size: 22px;
+     padding: 2px 10px;
+     margin: 13px auto;
+     background-color: green;
+     border-radius: 11px;
+     color: white;
+     font-weight: bold;
+     width: 15%;
+     font-family: 'Roboto', sans-serif;
+}
+
+.btn_submit:hover{
+     cursor: pointer;
+     color: red;
+}
+.btn_submit>a{
+     color: white;
+}
+.btn_submit>a:hover{
+     color: red;
+}
+input{
+     font-size: 18px;
+     padding: 2px;
+}

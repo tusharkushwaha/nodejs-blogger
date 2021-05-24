@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <%- include('../partials/head.ejs') %>
+</head>
+
+<% if(user){ %>
+
+     <body>
+          <!-- //navbar------ -->
+          <%- include('../partials/navbar.ejs') %>
+
+               <!-- -------main content------------- -->
+               <h1 id="signed_h1">Hi <span id="name_user">
+                         <%= user.firstname %>
+                    </span>. We are happy to see you back.</h1>
+               <section>
+                    <div class="blog_display">
+
+                         <% if(posts.length !=0){ %>
+
+                              <% for(var i=0; i<posts.length; i++) {%>
+                                   <div <% if(i%2 !=0){ %>
+                                        class="div_even"
+                                        <% } else{ %>
+                                             class="div_odd"
+                                             <% } %>>
+                                                  <!-- div is broken -->
+                                                  <div>
+                                                       <div id="title">
+                                                            <%= posts[i].title %>
+                                                       </div>
+                                                       <div>Published on:
+                                                            <%= posts[i].createdate %>
+                                                       </div>
+                                                  </div>
+                                                  <div>
+                                                       <a href="/post/viewpost/<%= posts[i].id %>" title="View"class="post_img">
+                                                            <img src="/images/view.png" alt="view" height="22px">
+                                                       </a>
+                                                       <a href="/post/editpost/<%= posts[i].id %>" title="Edit" class="post_img">
+                                                            <img src="/images/edit.png" alt="edit" height="20px">
+                                                       </a>
+                                                       <a href="/post/deletepost/<%= posts[i].id %>"  title="Delete" class="post_img">
+                                                            <img src="/images/delete.png" alt="delete" height="20px">
+                                                       </a>
+                                                       
+                                                  </div>
+
+
+
+
+
+
+                                   </div>
+
+                                   <% } %>
+                                        %>
+                                        <% }else{ %>
+                                             <div class="div_even">
+                                                  No Post to dispay.
+                                             </div>
+
+                                             <% } %>
+
+                    </div>
+               </section>
+     </body>
+     <% }else{ %>
+
+          <body class="background_img">
+               <!-- //navbar------ -->
+               <%- include('../partials/navbar.ejs') %>
+
+                    <!-- -------main content------------- -->
+
+                    <h1>Welcome to the family of Bloggers!</h1>
+
+                    <div id="unsigned_div">
+                         <a href="/auth/login">
+                              <h2>Create Your Firsr Post now.</h2>
+                         </a>
+                         <div class="logos">
+
+                              <div class="logos_div">
+                                   <span>1K+</span>
+                                   <div>
+                                        Active Members
+
+                                   </div>
+                              </div>
+                              <div class="logos_div">
+                                   <span>20+</span>
+                                   <div>
+                                        Countries
+                                   </div>
+                              </div>
+                              <div class="logos_div">
+                                   <span>100000+</span>
+                                   <div>Posts</div>
+                              </div>
+                              <div class="logos_div">
+                                   <span>10000+</span>
+                                   <div>Employees</div>
+                              </div>
+                         </div>
+                    </div>
+
+
+
+
+
+               
+          </body>
+
+
+
+          <% } %>
+
+
+
+
+
+</html>
